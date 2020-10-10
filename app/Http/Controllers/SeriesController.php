@@ -35,7 +35,7 @@ class SeriesController extends Controller
 
         $qtdTemporadas = $request->qtd_temporadas;
         $epPorTemporada = $request->ep_por_temporada;
-        for($i = 1; $i <= $qtdTemporadas; $qtdTemporadas++){
+        for($i = 1;$i <= $qtdTemporadas; $i++){
             $temporada = $serie->temporadas()->create(['numero' => $i]);
 
             for($j = 1; $j <= $epPorTemporada; $j++){
